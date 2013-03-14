@@ -12,21 +12,28 @@
 
 @end
 
-@implementation ViewController :
+@implementation ViewController
+@synthesize predictionLabel;
+@synthesize predictionArray;
     UIViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.predictionArray = [[NSArray alloc] initWithObjects:
+                                @"It is certain", @"It is decidedly so",
+                                @"All signs say YES",
+                                @"the stars are not aligned",
+                                @"my response is no",
+                                @"it is doubtful",
+                                @"Better not tell you now",
+                                @"Concentrate and ask again",
+                                @"Unable to answer now", nil];
+}
 
 
 - (IBAction)buttonPressed:(UIButton *)sender {
-    NSArray *predictionArray = [[NSArray alloc] initWithObjects:
-                       @"It is certain", @"It is decidedly so",
-                       @"All signs say YES",
-                        @"the stars are not aligned",
-                        @"my response is no",
-                        @"it is doubtful",
-                        @"Better not tell you now",
-                        @"Concentrate and ask again",
-                        @"Unable to answer now", nil];
-    self.predictionLabel.text = [predictionArray objectAtIndex:8];
+    
+    self.predictionLabel.text = [self.predictionArray objectAtIndex:5];
 }
 @end
