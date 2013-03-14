@@ -18,6 +18,8 @@
 
 
 - (IBAction)buttonPressed:(UIButton *)sender {
-    NSLog(@"button pressed");
+    /* we can say self because predictionLabel is a property of
+       the view controlller */
+    self.predictionLabel.text = @"Definitely yes";
 }
 @end
