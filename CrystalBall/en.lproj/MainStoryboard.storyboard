@@ -21,16 +21,16 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFA-00-ZsP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFA-00-ZsP">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="ZXQ-tA-UmA"/>
+                                    <constraint firstAttribute="height" constant="44" id="rxy-qr-N82"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Predict">
+                                <state key="normal" image="button_bg_off.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
+                                <state key="highlighted" image="button_bg_on.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -41,9 +41,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Erq-CT-hUf" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="Qp9-QI-hgR"/>
-                            <constraint firstItem="OFA-00-ZsP" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="25" id="eHl-JB-sEG"/>
                             <constraint firstItem="Erq-CT-hUf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="50" id="m2o-oZ-xBy"/>
-                            <constraint firstAttribute="bottom" secondItem="OFA-00-ZsP" secondAttribute="bottom" constant="14" id="vaH-tW-erE"/>
+                            <constraint firstItem="OFA-00-ZsP" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ovp-ES-hBP"/>
+                            <constraint firstAttribute="bottom" secondItem="OFA-00-ZsP" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="tZi-VA-Ve7"/>
                         </constraints>
                     </view>
                     <connections>
@@ -54,6 +54,22 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_bg_off.png" width="280" height="42"/>
+        <image name="button_bg_on.png" width="280" height="42"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="predictionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
