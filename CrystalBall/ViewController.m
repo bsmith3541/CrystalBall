@@ -12,18 +12,12 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController :
+    UIViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+
+- (IBAction)buttonPressed:(UIButton *)sender {
+    NSLog(@"button pressed");
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 @end

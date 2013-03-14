@@ -29,16 +29,19 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="8Sg-Sb-ak4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Erq-CT-hUf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="39f-uM-YCK"/>
                             <constraint firstAttribute="centerX" secondItem="OFA-00-ZsP" secondAttribute="centerX" type="user" id="6ba-3A-o8e"/>
-                            <constraint firstItem="OFA-00-ZsP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="208" id="Okj-hw-1gN"/>
                             <constraint firstItem="OFA-00-ZsP" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qGv-Bf-sFv"/>
                             <constraint firstAttribute="trailing" secondItem="Erq-CT-hUf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="x4M-b8-1pj"/>
                             <constraint firstItem="Erq-CT-hUf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="xGV-C4-VdY"/>
+                            <constraint firstItem="OFA-00-ZsP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="196" id="zHc-Jx-3Ti"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -52,6 +55,9 @@
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:" candidateClass="UIButton"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
