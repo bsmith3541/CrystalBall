@@ -15,12 +15,11 @@
 @implementation ViewController
 @synthesize predictionLabel;
 @synthesize predictionArray;
-    UIViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.predictionArray = [[NSArray alloc] initWithObjects:
+    predictionArray = [[NSArray alloc] initWithObjects:
                                 @"It is certain", @"It is decidedly so",
                                 @"All signs say YES",
                                 @"the stars are not aligned",
