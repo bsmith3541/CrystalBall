@@ -12,15 +12,20 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="It is decidedly so" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Erq-CT-hUf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="sko-1j-mj4"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="It is decidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="219" translatesAutoresizingMaskIntoConstraints="NO" id="Erq-CT-hUf">
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="Rem-Vg-K1N"/>
                                     <constraint firstAttribute="height" constant="68" id="i3C-SW-r5Y"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFA-00-ZsP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="ZXQ-tA-UmA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Predict">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,12 +41,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Erq-CT-hUf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="39f-uM-YCK"/>
-                            <constraint firstAttribute="centerX" secondItem="OFA-00-ZsP" secondAttribute="centerX" type="user" id="6ba-3A-o8e"/>
-                            <constraint firstItem="OFA-00-ZsP" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qGv-Bf-sFv"/>
-                            <constraint firstAttribute="trailing" secondItem="Erq-CT-hUf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="x4M-b8-1pj"/>
-                            <constraint firstItem="Erq-CT-hUf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="xGV-C4-VdY"/>
-                            <constraint firstItem="OFA-00-ZsP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="196" id="zHc-Jx-3Ti"/>
+                            <constraint firstItem="sko-1j-mj4" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="OAs-bK-J3p"/>
+                            <constraint firstItem="sko-1j-mj4" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="TUc-Ga-76V"/>
+                            <constraint firstItem="OFA-00-ZsP" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="25" id="eHl-JB-sEG"/>
+                            <constraint firstItem="Erq-CT-hUf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="50" id="m2o-oZ-xBy"/>
+                            <constraint firstItem="Erq-CT-hUf" firstAttribute="centerY" secondItem="sko-1j-mj4" secondAttribute="centerY" type="default" id="soJ-Mh-p6e"/>
+                            <constraint firstItem="sko-1j-mj4" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="tgF-PP-ElP"/>
+                            <constraint firstAttribute="bottom" secondItem="OFA-00-ZsP" secondAttribute="bottom" constant="14" id="vaH-tW-erE"/>
                         </constraints>
                     </view>
                     <connections>
@@ -52,6 +58,21 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.png" width="320" height="480"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="predictionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

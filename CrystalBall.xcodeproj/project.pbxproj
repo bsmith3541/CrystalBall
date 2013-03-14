@@ -18,6 +18,7 @@
 		9832AAC616F15C1A0076B79E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9832AAC516F15C1A0076B79E /* Default-568h@2x.png */; };
 		9832AAC916F15C1A0076B79E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9832AAC716F15C1A0076B79E /* MainStoryboard.storyboard */; };
 		9832AACC16F15C1A0076B79E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9832AACB16F15C1A0076B79E /* ViewController.m */; };
+		9832AAD416F1A88E0076B79E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9832AAD316F1A88E0076B79E /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		9832AAC816F15C1A0076B79E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9832AACA16F15C1A0076B79E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9832AACB16F15C1A0076B79E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9832AAD316F1A88E0076B79E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		9832AAB516F15C1A0076B79E /* CrystalBall */ = {
 			isa = PBXGroup;
 			children = (
+				9832AAD216F1A83B0076B79E /* images */,
 				9832AABE16F15C1A0076B79E /* AppDelegate.h */,
 				9832AABF16F15C1A0076B79E /* AppDelegate.m */,
 				9832AAC716F15C1A0076B79E /* MainStoryboard.storyboard */,
@@ -105,6 +108,14 @@
 				9832AAC516F15C1A0076B79E /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9832AAD216F1A83B0076B79E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9832AAD316F1A88E0076B79E /* background.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 				9832AAC416F15C1A0076B79E /* Default@2x.png in Resources */,
 				9832AAC616F15C1A0076B79E /* Default-568h@2x.png in Resources */,
 				9832AAC916F15C1A0076B79E /* MainStoryboard.storyboard in Resources */,
+				9832AAD416F1A88E0076B79E /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
