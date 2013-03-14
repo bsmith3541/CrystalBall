@@ -18,8 +18,15 @@
 
 
 - (IBAction)buttonPressed:(UIButton *)sender {
-    /* we can say self because predictionLabel is a property of
-       the view controlller */
-    self.predictionLabel.text = @"Definitely yes";
+    NSArray *predictionArray = [[NSArray alloc] initWithObjects:
+                       @"It is certain", @"It is decidedly so",
+                       @"All signs say YES",
+                        @"the stars are not aligned",
+                        @"my response is no",
+                        @"it is doubtful",
+                        @"Better not tell you now",
+                        @"Concentrate and ask again",
+                        @"Unable to answer now", nil];
+    self.predictionLabel.text = [predictionArray objectAtIndex:8];
 }
 @end

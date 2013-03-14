@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController :
-    UIViewController
+@interface ViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
+
 - (IBAction)buttonPressed:(UIButton *)sender;
-@property (strong, nonatomic) IBOutlet
-    UILabel *predictionLabel;
 
 @end
