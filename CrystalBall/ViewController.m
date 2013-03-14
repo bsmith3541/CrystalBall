@@ -34,11 +34,14 @@
                                 @"Unable to answer now", nil];
 }
 
+- (void) makePrediction {
+    NSUInteger index = arc4random_uniform(self.predictionArray.count);
+    self.predictionLabel.text = [self.predictionArray objectAtIndex:index];
+}
 
 - (BOOL) canBecomeFirstResponder {
     return YES;
 }
-
 
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     self.predictionLabel.text = @"";
@@ -46,8 +49,7 @@
 
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (motion == UIEventSubtypeMotionShake) {
-        NSUInteger index = arc4random_uniform(self.predictionArray.count);
-        self.predictionLabel.text = [self.predictionArray objectAtIndex:index];
+        [self makePrediction];
     }
 }
 
@@ -60,7 +62,6 @@
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSUInteger index = arc4random_uniform(self.predictionArray.count);
-    self.predictionLabel.text = [self.predictionArray objectAtIndex:index];
+    [self makePrediction];
 }
 @end

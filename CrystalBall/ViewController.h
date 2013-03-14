@@ -15,5 +15,5 @@
 @property (strong, nonatomic) NSArray *predictionArray;
 
 
-
+- (void) makePrediction;
 @end
